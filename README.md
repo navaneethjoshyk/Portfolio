@@ -1,79 +1,25 @@
-![thumbnail](https://user-images.githubusercontent.com/16558205/180779213-ea740975-3df1-460a-a964-0a623ee25872.png)
 
-### Live - https://react-portfolio-template.netlify.app
-### Demo Video - https://www.youtube.com/watch?v=62_HLbx2zLQ&t=9s
-### Open Source UI Components - https://ui.chetanverma.com/
+# Portfolio Service Descriptions
 
-### Tutorials
+A collection of professionally drafted descriptions for core design and development services. These follow a consistent structure: identifying the action, the medium, and the specific area of focus.
 
-Youtube - https://www.youtube.com/watch?v=8cmJ2kR4SpM
+---
 
-Blog - https://www.chetanverma.com/blog/how-to-build-a-portfolio-website-using-nextjs-and-tailwindcss
+## 1. User Experience (UX) Design
+> "We facilitate the creation and development of digital product strategies, with a particular focus on intuitive navigation and seamless user journeys."
 
-### Features - 
+## 2. User Interface (UI) Design
+> "We assist in the creation and development of digital touchpoints, with a particular focus on their visual hierarchy, typography, and aesthetic composition."
 
-- Modern Stack (Next.js + TailwindCSS)
-- Minimal Design
-- Easy To Browse
-- Easy To Customize your details With GUI
-- Blog Crud (Create, Read, Update, Delete blog with easy to use UI).
-- Dark Mode
+## 3. Accessibility
+> "We assist in the creation and development of inclusive digital environments, with a particular focus on ensuring content is perceivable and operable for users of all abilities."
 
+## 4. Web Development
+> "We facilitate the creation and development of high-performance websites, with a particular focus on clean architecture, responsive frameworks, and optimized loading speeds."
 
-### Sections
+---
 
-- Header
-- Work
-- Services
-- About
-- Contact
-- Markdown Blog
-
-
-### How To Use
-
-- Clone this repo
-- run `yarn`
-- `yarn dev`
-
-
-### How To Deploy - 
-
-- There are many ways to Deploy this repo.
-- here we are gonna use netlify
-- Login into netlify with github
-- after login select the forked repo or the repo you want to deploy
-- after selecting netlify will automatially deploy your website.
-
-Quickes way to deploy this repo - 
-
-[![Deploy To Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/chetanverma16/react-portfolio-template)
-
-
-### How To Contribute - 
-
-I would be very happy to review your PRs and all the awesome things that you can improve on this portfolio.
-
-
-### Tech Stack Used - 
-- Next.js
-- TailwindCSS
-
-
-### Thanks
-
-If you liked this portfolio template, don't forget to give it a ⭐.
-
-## Awesome Contributors
-[@Aryan3212](https://github.com/Aryan3212) [@achu-krishna](https://github.com/achu-krishna)
-
-## Supporting
-Many hours of hard work have gone into this project. Your support will be very appreciated!
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/chetanverma)
-
-
-
-
-
-
+### Implementation Tips
+- **Consistency:** Using the same sentence structure across all services helps create a cohesive visual and reading rhythm on your portfolio page.
+- **Tone:** These use "We," which is standard for agencies or freelancers presenting as a professional entity. Swap to "I" if you prefer a more personal, individual freelancer tone.
+- **Visuals:** These pair well with clean iconography or high-quality project thumbnails in a grid layout.
