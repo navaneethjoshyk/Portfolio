@@ -1,27 +1,39 @@
 import React from "react";
 
-const WorkCard = ({ img, name, description, onClick }) => {
+const WorkCard = ({ img, name, description, onClick, date }) => {
   return (
     <div
-      className="overflow-hidden rounded-lg p-2 laptop:p-4 first:ml-0 link"
+      className="group overflow-hidden rounded-xl border border-white/10 bg-[#0f0f0f] p-8 transition-all hover:bg-[#161616] cursor-pointer"
       onClick={onClick}
     >
-      <div
-        className="relative rounded-lg overflow-hidden transition-all ease-out duration-300 
-                   h-64 mob:h-80 tablet:h-96 laptop:h-[600px]" 
-      >
+      {/* Header: Title and Read More */}
+      <div className="flex items-start justify-between">
+        <div>
+          <h2 className="text-2xl font-bold text-white tablet:text-3xl">
+            {name}
+          </h2>
+          <p className="mt-1 text-sm text-gray-500">{date || "Recent Project"}</p>
+        </div>
+        
+        <div className="flex items-center gap-2 text-sm font-medium text-white opacity-0 transition-opacity group-hover:opacity-100">
+          <span>Read more</span>
+          <span className="text-xl">→</span>
+        </div>
+      </div>
+
+      {/* Description */}
+      <p className="mt-6 text-lg leading-relaxed text-gray-400">
+        {description}
+      </p>
+
+      {/* Image Container (The White Box) */}
+      <div className="mt-10 overflow-hidden rounded-xl bg-white aspect-video flex items-center justify-center">
         <img
-          alt={name}
-          className="h-auto w-full object-cover hover:scale-110 transition-all ease-out duration-300"
           src={img}
+          alt={name}
+          className="w-full h-full object-contain p-8 transition-transform duration-500 group-hover:scale-105"
         />
       </div>
-      <h1 className="mt-5 text-2xl tablet:text-3xl font-medium">
-        {name ? name : "Project Name"}
-      </h1>
-      <h2 className="text-lg tablet:text-xl opacity-50">
-        {description ? description : "Description"}
-      </h2>
     </div>
   );
 };

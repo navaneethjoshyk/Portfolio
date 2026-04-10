@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useRouter } from "next/router"; // 1. Added useRouter import
 import Header from "../components/Header";
 import ServiceCard from "../components/ServiceCard";
 import Socials from "../components/Socials";
@@ -16,7 +17,10 @@ import Workflow from "../components/Workflow";
 import data from "../data/portfolio.json";
 
 export default function Home() {
-  // Ref
+  // Router initialization
+  const router = useRouter(); // 2. Initialized router
+
+  // Refs
   const workRef = useRef();
   const aboutRef = useRef();
   const textOne = useRef();
@@ -64,48 +68,44 @@ export default function Home() {
           handleWorkScroll={handleWorkScroll}
           handleAboutScroll={handleAboutScroll}
         />
+        
         <div className="laptop:mt-20 mt-10">
           <div className="mt-5">
-            <h1
-              ref={textOne}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
-            >
+            <h1 ref={textOne} className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5">
               {data.headerTaglineOne}
             </h1>
-            <h1
-              ref={textTwo}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-            >
+            <h1 ref={textTwo} className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5">
               {data.headerTaglineTwo}
             </h1>
-
-            <h1
-              ref={textThree}
-              className="text-xl tablet:text-3xl laptop:text-4xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5 opacity-70 mt-5"
-            >
+            <h1 ref={textThree} className="text-xl tablet:text-3xl laptop:text-4xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5 opacity-70 mt-5">
               {data.headerTaglineThree}
             </h1>
-            <h1
-              ref={textFour}
-              className="text-xl tablet:text-3xl laptop:text-4xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5 opacity-70"
-            >
+            <h1 ref={textFour} className="text-xl tablet:text-3xl laptop:text-4xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5 opacity-70">
               {data.headerTaglineFour}
             </h1>
           </div>
-
           <Socials className="mt-2 laptop:mt-5" />
         </div>
 
+        {/* WORK SECTION */}
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
-          <h1 className="text-2xl text-bold">Work.</h1>
-          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
+          <h1 className="text-2xl text-bold font-bold">Work.</h1>
+          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-8">
             {data.projects.map((project) => (
               <WorkCard
                 key={project.id}
                 img={project.imageSrc}
                 name={project.title}
                 description={project.description}
-                onClick={() => window.open(project.url)}
+                date={project.date}
+                onClick={() => {
+                  // 3. Logic to handle internal vs external links in same tab
+                  if (project.url.startsWith("http")) {
+                    window.location.href = project.url; 
+                  } else {
+                    router.push(project.url);
+                  }
+                }}
               />
             ))}
           </div>
@@ -117,8 +117,9 @@ export default function Home() {
         <Workflow workflow={data.workflow} />
         <div className="border-b border-gray-800 my-20"></div>
 
+        {/* SERVICES SECTION */}
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-          <h1 className="tablet:m-10 text-2xl text-bold">Services.</h1>
+          <h1 className="tablet:m-10 text-2xl text-bold font-bold">Services.</h1>
           <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
             {data.services.map((service, index) => (
               <ServiceCard
@@ -130,12 +131,12 @@ export default function Home() {
           </div>
         </div>
 
-        {/* UPDATED ABOUT SECTION */}
+        {/* ABOUT SECTION */}
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
-          <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
+          <h1 className="tablet:m-10 text-2xl text-bold font-bold">About.</h1>
           <div className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
             {data.aboutpara.split("\n\n").map((paragraph, index) => (
-              <p key={index} className="mb-6">
+              <p key={index} className="mb-6 opacity-70">
                 {paragraph}
               </p>
             ))}
