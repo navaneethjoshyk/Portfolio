@@ -133,15 +133,23 @@ export default function Home() {
 
         {/* ABOUT SECTION */}
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
-          <h1 className="tablet:m-10 text-2xl text-bold font-bold">About.</h1>
-          <div className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
-            {data.aboutpara.split("\n\n").map((paragraph, index) => (
-              <p key={index} className="mb-6 opacity-70">
-                {paragraph}
-              </p>
-            ))}
+            {/* Header with a cleaner, more consistent margin */}
+            <h1 className="tablet:mx-10 text-3xl laptop:text-5xl font-bold mb-10 tracking-tighter">
+              About.
+            </h1>
+
+            {/* Removed the w-3/5 constraint and added a max-width for readability */}
+            <div className="tablet:mx-10 mt-2 text-xl laptop:text-xl w-full max-w-none">
+              {data.aboutpara.split("\n\n").map((paragraph, index) => (
+                <p 
+                  key={index} 
+                  className="mb-8 opacity-70 leading-relaxed laptop:leading-snug font-light"
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
-        </div>
 
         <Footer />
       </div>
