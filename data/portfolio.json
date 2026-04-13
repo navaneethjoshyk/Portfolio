@@ -6,13 +6,13 @@
     "id": "1",
     "title": "Care calendar",
     "description": "A centralized care management system designed for caregivers...",
-    "imageSrc": "/images/Care-calender.png",
+    "imageSrc": "/images/care-cover.svg",
     "url": "/projects/careCalendar",
     "date": "8 months ago"
   },
-            {"id":"2","title":"Ocean Palette | The Art of the Plate","description":"Web Development","imageSrc":"/images/restaurant.png","url":"https://www.behance.net/gallery/185453001/Ocean-Palette-The-Art-of-the-Plate"},
+            {"id":"2","title":"Ocean Palette | The Art of the Plate","description":"Web Development","imageSrc":"/images/restaurant.png","url":"/projects/oceanPalette","date": "1 year ago"},
             {"id":"3","title":"Med-connect","description":"Design","imageSrc":"/images/Med-connect.png","url":"https://www.behance.net/gallery/180793769/Medconnect-Online-healthcare-Platform"},
-            {"id":"4","title":"Cred app UI","description":"Online payment","imageSrc":"/images/cred.png","url":"https://www.behance.net/gallery/159045857/Cred-app-UI"}],
+            {"id":"4","title":"Cred app UI","description":"Online payment","imageSrc":"/images/cred cover.svg","url":"https://www.behance.net/gallery/159045857/Cred-app-UI"}],
 "stats": [
   { "id": 1, "number": "3+", "label": "Finished projects" },
   { "id": 2, "number": "94%", "label": "Conversion increase" },
@@ -72,7 +72,7 @@
         }
       ],
 
-"aboutpara": "I am a Junior UX/UI Designer and Web Developer with over two years of experience in the telecom, healthcare, and non-profit sectors. By combining Interaction Design expertise with Full-Stack development, I bridge the gap between complex user needs and high-performance technical solutions.\n\nMy expertise spans the entire lifecycle from Figma prototyping and design systems to implementing responsive front-end interfaces. I am dedicated to a user-centered approach that ensures every project is as functional as it is visually compelling.\n\nWhether leading design at OHANA™ or developing resource-sharing platforms at B12Feed, I thrive in agile teams translating stakeholder vision into reality. I focus on creating accessible, impactful experiences that drive both user satisfaction and business growth.",
+"aboutpara": "I am an UX/UI Designer and Web Developer with over two years of experience in the telecom, healthcare, and non-profit sectors. By combining Interaction Design expertise with Full-Stack development, I bridge the gap between complex user needs and high-performance technical solutions.\n\nMy expertise spans the entire lifecycle from Figma prototyping and design systems to implementing responsive front-end interfaces. I am dedicated to a user-centered approach that ensures every project is as functional as it is visually compelling.\n\nWhether leading design at OHANA™ or developing resource-sharing platforms at B12Feed, I thrive in agile teams translating stakeholder vision into reality. I focus on creating accessible, impactful experiences that drive both user satisfaction and business growth.",
   "resume": {
     "tagline": "I'm an UX/UI Product Designer & Web Developer.",
     "description": "Creative and detail-oriented designer with 2+ years of experience delivering intuitive digital products across telecom, healthcare, and non-profit sectors. Passionate about translating complex user needs into clean, accessible, and impactful experiences using Figma, React, and AI-powered tools.",
