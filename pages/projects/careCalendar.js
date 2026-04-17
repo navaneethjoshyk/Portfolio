@@ -9,15 +9,23 @@ const AutoScrollSection = ({ title, images }) => {
   return (
     <div className="mb-16">
       <h3 className="text-gray-500 uppercase text-sm mb-6 tracking-widest">{title}</h3>
-      {/* Container with gradient masks for a smooth fade on edges */}
-      <div className="relative flex overflow-hidden group">
-        <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#000] to-transparent z-10"></div>
-        <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#000] to-transparent z-10"></div>
+      
+      {/* 1. Added whitespace-nowrap to prevent stacking */}
+      <div className="relative flex overflow-hidden group whitespace-nowrap">
+        
+        {/* Gradient Masks */}
+        <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#000] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#000] to-transparent z-10 pointer-events-none"></div>
 
-        <div className="flex space-x-8 animate-loop-scroll group-hover:paused w-max">
+        {/* 2. Added flex-shrink-0 to images and flex-nowrap to the mover */}
+        <div className="flex flex-nowrap space-x-8 animate-loop-scroll group-hover:paused">
+          
           {/* Primary Set */}
           {images.map((img, index) => (
-            <div key={index} className="w-[300px] laptop:w-[450px] aspect-video rounded-2xl overflow-hidden border border-white/10 bg-[#161616] flex items-center justify-center">
+            <div 
+              key={index} 
+              className="flex-shrink-0 w-[300px] laptop:w-[450px] aspect-video rounded-2xl overflow-hidden border border-white/10 bg-[#161616] flex items-center justify-center"
+            >
               <img 
                 src={img} 
                 className="w-full h-full object-contain p-2" 
@@ -25,9 +33,13 @@ const AutoScrollSection = ({ title, images }) => {
               />
             </div>
           ))}
-          {/* Duplicate Set for Seamless Loop */}
+
+          {/* Duplicate Set */}
           {images.map((img, index) => (
-            <div key={`dup-${index}`} className="w-[300px] laptop:w-[450px] aspect-video rounded-2xl overflow-hidden border border-white/10 bg-[#161616] flex items-center justify-center">
+            <div 
+              key={`dup-${index}`} 
+              className="flex-shrink-0 w-[300px] laptop:w-[450px] aspect-video rounded-2xl overflow-hidden border border-white/10 bg-[#161616] flex items-center justify-center"
+            >
               <img 
                 src={img} 
                 className="w-full h-full object-contain p-2" 

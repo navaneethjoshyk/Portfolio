@@ -8,20 +8,43 @@ import data from "../../data/portfolio.json";
 const AutoScrollSection = ({ title, images }) => {
   return (
     <div className="mb-16">
-      <h3 className="text-gray-400 uppercase text-xs mb-6 tracking-[0.3em] font-medium">{title}</h3>
-      <div className="relative flex overflow-hidden group">
-        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#000] to-transparent z-10"></div>
-        <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#000] to-transparent z-10"></div>
+      <h3 className="text-gray-500 uppercase text-sm mb-6 tracking-widest">{title}</h3>
+      
+      {/* 1. Added whitespace-nowrap to prevent stacking */}
+      <div className="relative flex overflow-hidden group whitespace-nowrap">
+        
+        {/* Gradient Masks */}
+        <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#000] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#000] to-transparent z-10 pointer-events-none"></div>
 
-        <div className="flex space-x-12 animate-loop-scroll group-hover:paused w-max">
+        {/* 2. Added flex-shrink-0 to images and flex-nowrap to the mover */}
+        <div className="flex flex-nowrap space-x-8 animate-loop-scroll group-hover:paused">
+          
+          {/* Primary Set */}
           {images.map((img, index) => (
-            <div key={index} className="w-[300px] laptop:w-[500px] aspect-[16/10] rounded-3xl overflow-hidden border border-white/5 bg-[#0A0A0A] flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-700">
-              <img src={img} className="w-full h-full object-cover" alt={`${title} ${index}`} />
+            <div 
+              key={index} 
+              className="flex-shrink-0 w-[300px] laptop:w-[450px] aspect-video rounded-2xl overflow-hidden border border-white/10 bg-[#161616] flex items-center justify-center"
+            >
+              <img 
+                src={img} 
+                className="w-full h-full object-contain p-2" 
+                alt={`${title} ${index}`} 
+              />
             </div>
           ))}
+
+          {/* Duplicate Set */}
           {images.map((img, index) => (
-            <div key={`dup-${index}`} className="w-[300px] laptop:w-[500px] aspect-[16/10] rounded-3xl overflow-hidden border border-white/5 bg-[#0A0A0A] flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-700">
-              <img src={img} className="w-full h-full object-cover" alt={`${title} dup ${index}`} />
+            <div 
+              key={`dup-${index}`} 
+              className="flex-shrink-0 w-[300px] laptop:w-[450px] aspect-video rounded-2xl overflow-hidden border border-white/10 bg-[#161616] flex items-center justify-center"
+            >
+              <img 
+                src={img} 
+                className="w-full h-full object-contain p-2" 
+                alt={`${title} dup ${index}`} 
+              />
             </div>
           ))}
         </div>
