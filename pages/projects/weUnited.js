@@ -1,57 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
+import { useTheme } from "next-themes";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Cursor from "../../components/Cursor";
 import data from "../../data/portfolio.json";
 
-// Component for the animated visual displays
-const AutoScrollSection = ({ title, images }) => {
-  return (
-    <div className="mb-16">
-      <h3 className="text-gray-500 uppercase text-sm mb-6 tracking-widest">{title}</h3>
-      
-      <div className="relative flex overflow-hidden group whitespace-nowrap">
-        {/* Gradient Masks */}
-        <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#000] to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#000] to-transparent z-10 pointer-events-none"></div>
-
-        {/* Sliding Content */}
-        <div className="flex flex-nowrap space-x-8 animate-loop-scroll group-hover:paused">
-          {/* Primary Set */}
-          {images.map((img, index) => (
-            <div 
-              key={index} 
-              className="flex-shrink-0 w-[300px] laptop:w-[450px] aspect-video rounded-2xl overflow-hidden border border-white/10 bg-[#161616] flex items-center justify-center"
-            >
-              <img 
-                src={img} 
-                className="w-full h-full object-contain p-4" 
-                alt={`${title} ${index}`} 
-              />
-            </div>
-          ))}
-
-          {/* Duplicate Set for Seamless Looping */}
-          {images.map((img, index) => (
-            <div 
-              key={`dup-${index}`} 
-              className="flex-shrink-0 w-[300px] laptop:w-[450px] aspect-video rounded-2xl overflow-hidden border border-white/10 bg-[#161616] flex items-center justify-center"
-            >
-              <img 
-                src={img} 
-                className="w-full h-full object-contain p-4" 
-                alt={`${title} dup ${index}`} 
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
+const evolutionImages = [
+  "/images/matrimony.svg",
+  "/images/matrimony1.svg",
+  "/images/matrimony2.svg",
+  "/images/matrimony3.svg"
+];
 
 const WeUnitedCaseStudy = () => {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Standard container class to keep content centered
+  const containerStyle = `container mx-auto mt-10 px-5 laptop:px-0 transition-colors duration-300 ${
+    mounted && theme === "dark" ? "text-white" : "text-black"
+  }`;
+
   return (
     <>
       <Head>
@@ -59,7 +33,7 @@ const WeUnitedCaseStudy = () => {
       </Head>
       {data.showCursor && <Cursor />}
       
-      <div className={`container mx-auto mt-10 px-5 laptop:px-0 ${data.showCursor && "cursor-none"}`}>
+      <div className={containerStyle}>
         <Header isBlog={true} />
         
         <main className="mt-20 max-w-6xl mx-auto">
@@ -74,7 +48,9 @@ const WeUnitedCaseStudy = () => {
           {/* HERO SECTION */}
           <section className="mb-24">
             <h1 className="text-6xl laptop:text-8xl font-black mb-10 tracking-tighter">WeUnited.ca</h1>
-            <div className="grid grid-cols-1 tablet:grid-cols-3 gap-10 border-t border-white/10 pt-10">
+            <div className={`grid grid-cols-1 tablet:grid-cols-3 gap-10 border-t pt-10 ${
+              mounted && theme === "dark" ? "border-white/10" : "border-black/10"
+            }`}>
               <div>
                 <h3 className="text-gray-500 uppercase tracking-widest text-xs mb-2">Role</h3>
                 <p className="text-lg font-medium italic">Lead UI/UX Designer & Developer</p>
@@ -100,106 +76,94 @@ const WeUnitedCaseStudy = () => {
               </div>
               <div className="laptop:col-span-8">
                 <p className="text-2xl laptop:text-4xl font-light leading-snug mb-8">
-                  Users in the matrimony space struggle with <span className="text-white font-semibold">profile authenticity</span>. Fragmented data and unverified users lead to safety concerns and dating fatigue.
+                  Users in the matrimony space struggle with <span className={mounted && theme === "dark" ? "text-white font-semibold" : "text-black font-semibold"}>profile authenticity</span>. Fragmented data and unverified users lead to safety concerns.
                 </p>
-                <div className="grid grid-cols-1 tablet:grid-cols-2 gap-10 mt-12 pt-10 border-t border-white/10">
+                <div className={`grid grid-cols-1 tablet:grid-cols-2 gap-10 mt-12 pt-10 border-t ${
+                  mounted && theme === "dark" ? "border-white/10" : "border-black/10"
+                }`}>
                   <div>
                     <h3 className="text-rose-500 font-mono text-sm mb-4 uppercase tracking-[0.2em]">The Responsibility</h3>
-                    <p className="opacity-70 leading-relaxed text-lg font-light">My goal was to bridge the gap between traditional cultural values and a modern, high-security digital interface.</p>
+                    <p className="opacity-70 leading-relaxed text-lg font-light">Bridge the gap between traditional cultural values and high-security digital interface.</p>
                   </div>
                   <div>
                     <h3 className="text-rose-500 font-mono text-sm mb-4 uppercase tracking-[0.2em]">The Hypothesis</h3>
-                    <p className="opacity-70 leading-relaxed text-lg font-light">"If we mandate ID verification and use values-based filtering, then meaningful conversation rates will increase by 40%."</p>
+                    <p className="opacity-70 leading-relaxed text-lg font-light">"ID verification and values-based filtering will increase meaningful conversations by 40%."</p>
                   </div>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* STRATEGIC INQUIRY (HMW) */}
-          <section className="mb-32">
-            <div className="border-l-8 border-rose-500 pl-8 mb-16">
-              <h2 className="text-3xl laptop:text-4xl font-black uppercase tracking-tighter">Strategic Inquiry</h2>
-              <p className="text-xl opacity-50 mt-2 italic">Refining the experience through How Might We statements.</p>
+          {/* THE EVOLUTION (MARQUEE) */}
+          <section className={`mb-32 w-screen relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] overflow-hidden py-16 transition-colors duration-300 ${
+            mounted && theme === "dark" ? "bg-zinc-950" : "bg-gray-100"
+          }`}>
+            <div className="max-w-[1200px] mx-auto px-10 mb-10">
+              <h2 className="text-4xl font-bold italic tracking-tighter uppercase">The Evolution</h2>
+              <p className="text-zinc-500 font-mono text-xs mt-2 tracking-[0.2em]">Phase 3: High-Fidelity Refinement</p>
             </div>
 
-            <div className="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 gap-6 mb-16">
-              <div className="bg-[#0D0D0D] p-10 rounded-[2rem] border border-white/5 hover:border-rose-500/30 transition-all group">
-                <span className="text-rose-500 font-mono text-xs mb-4 block tracking-widest">01 / TRUST</span>
-                <p className="text-xl font-medium leading-tight group-hover:text-rose-300 transition-colors">How might we build trust in a space where catfishing is a common pain point?</p>
-              </div>
-              <div className="bg-[#0D0D0D] p-10 rounded-[2rem] border border-white/5 hover:border-rose-500/30 transition-all group">
-                <span className="text-rose-500 font-mono text-xs mb-4 block tracking-widest">02 / EFFICIENCY</span>
-                <p className="text-xl font-medium leading-tight group-hover:text-rose-300 transition-colors">How might we streamline matchmaking so users find quality over quantity?</p>
-              </div>
-              <div className="bg-[#0D0D0D] p-10 rounded-[2rem] border border-white/5 hover:border-rose-500/30 transition-all group">
-                <span className="text-rose-500 font-mono text-xs mb-4 block tracking-widest">03 / PERSONAS</span>
-                <p className="text-xl font-medium leading-tight group-hover:text-rose-300 transition-colors">How might we design for both the busy professional and community-driven users?</p>
-              </div>
+            <div className={`relative flex overflow-x-hidden border-y ${
+              mounted && theme === "dark" ? "border-zinc-800/50" : "border-zinc-300"
+            }`}>
+              {/* Marquee Logic */}
+              {[1, 2].map((set) => (
+                <div 
+                  key={set}
+                  className={`${set === 1 ? 'flex animate-marquee' : 'absolute top-0 flex animate-marquee2'} whitespace-nowrap py-8`}
+                >
+                  {evolutionImages.map((src, index) => (
+                    <div key={`${set}-${index}`} className="mx-4 flex-shrink-0">
+                      <div className={`w-[800px] laptop:w-[950px] h-[450px] laptop:h-[550px] rounded-lg overflow-hidden border shadow-xl ${
+                        mounted && theme === "dark" ? "bg-zinc-900 border-zinc-800" : "bg-white border-zinc-200"
+                      }`}>
+                        <img src={src} alt="Fidelity View" className="w-full h-full object-cover object-top" />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ))}
             </div>
           </section>
 
-        
-
-          {/* OUTCOME & EVALUATION */}
-          <section className="mb-40 border-t border-white/10 pt-20">
+          {/* EVALUATION */}
+          <section className={`mb-40 border-t pt-20 ${mounted && theme === "dark" ? "border-white/10" : "border-black/10"}`}>
             <h2 className="text-4xl font-bold mb-16 italic tracking-tighter text-center uppercase">Evaluation</h2>
             <div className="grid grid-cols-1 laptop:grid-cols-3 gap-12 text-center">
-              <div>
-                <h3 className="text-2xl font-bold mb-2">40% Increase</h3>
-                <p className="opacity-50 text-sm">Improvement in successful ID-verified registrations.</p>
-              </div>
-              <div className="border-x border-white/5">
-                <h3 className="text-2xl font-bold mb-2">Reduced Fatigue</h3>
-                <p className="opacity-50 text-sm">Users reported a 30% decrease in time spent filtering irrelevant profiles.</p>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold mb-2">95+ Performance</h3>
-                <p className="opacity-50 text-sm">Optimized Lighthouse scores for global accessibility and speed.</p>
-              </div>
+              {[
+                { title: "40% Increase", desc: "Improvement in ID-verified registrations." },
+                { title: "Reduced Fatigue", desc: "30% decrease in time spent filtering profiles." },
+                { title: "95+ Performance", desc: "Optimized Lighthouse scores for speed." }
+              ].map((stat, i) => (
+                <div key={i} className={i === 1 ? (mounted && theme === "dark" ? "border-x border-white/5" : "border-x border-black/5") : ""}>
+                  <h3 className="text-2xl font-bold mb-2">{stat.title}</h3>
+                  <p className="opacity-50 text-sm">{stat.desc}</p>
+                </div>
+              ))}
             </div>
           </section>
 
-          {/* CALL TO ACTION: LIVE SITE & FIGMA */}
+          {/* CTA */}
           <section className="mb-40">
-            <div className="bg-[#0D0D0D] rounded-[3rem] p-16 laptop:px-24 border border-white/10 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-96 h-96 bg-rose-500/5 blur-[120px] -z-10" />
-              
+            <div className={`rounded-[3rem] p-16 laptop:px-24 border relative overflow-hidden transition-colors ${
+              mounted && theme === "dark" ? "bg-[#0D0D0D] border-white/10" : "bg-gray-50 border-black/5"
+            }`}>
               <div className="flex flex-col laptop:flex-row items-center justify-between gap-12">
                 <div className="laptop:w-2/3">
                   <h2 className="text-3xl laptop:text-5xl font-bold mb-6 italic">Experience the Solution</h2>
-                  <p className="text-xl opacity-50 mb-8 font-light">
-                    Explore the full UI/UX documentation, design system, and live implementation of the WeUnited matrimony platform.
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-3">
-                    {["WCAG 2.1 Compliant", "React/Next.js", "User-Validated"].map((tag) => (
-                      <span key={tag} className="px-4 py-1 rounded-full border border-white/20 text-xs uppercase tracking-widest opacity-60">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                  <p className="text-xl opacity-50 mb-8 font-light">Explore the full UI/UX documentation and live implementation.</p>
                 </div>
-
                 <div className="flex flex-col gap-4 w-full laptop:w-1/3">
-                  
-                  <a 
-                    href="https://weunited.ca/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-3 bg-white text-black px-8 py-5 rounded-2xl font-bold text-lg hover:bg-rose-500 hover:text-white transition-all duration-300"
-                  >
-                    Launch Live Site <span>↗</span>
+                  <a href="https://weunited.ca/" className={`flex items-center justify-center gap-3 px-8 py-5 rounded-2xl font-bold text-lg transition-all ${
+                    mounted && theme === "dark" ? "bg-white text-black hover:bg-rose-500 hover:text-white" : "bg-black text-white hover:bg-rose-500"
+                  }`}>
+                    Launch Site ↗
                   </a>
-
-                  <a 
-                    href="https://www.figma.com/design/Gs4DkmldJhRGNUOvFEoNG3/matrimony-website?node-id=1-2&t=ayL9dpDYALn9Soer-1" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-3 bg-[#161616] text-white border border-white/10 px-8 py-5 rounded-2xl font-bold text-lg hover:border-rose-500 transition-all duration-300"
-                  >
-                    View Figma Specs <span>⚛</span>
-                  </a>gi
+                  <a href="https://figma.com/..." className={`flex items-center justify-center gap-3 border px-8 py-5 rounded-2xl font-bold text-lg transition-all ${
+                    mounted && theme === "dark" ? "bg-[#161616] text-white border-white/10 hover:border-rose-500" : "bg-white text-black border-black/10 hover:border-rose-500"
+                  }`}>
+                    Figma Specs ⚛
+                  </a>
                 </div>
               </div>
             </div>
