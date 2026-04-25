@@ -161,21 +161,27 @@ const OceanPaletteCaseStudy = () => {
             <AutoScrollSection 
               title="Brand Identity & Mood" 
               images={[
-      // "/images/ocean/OceanLow-fidelity-1.svg", 
-      // "/images/ocean/Low-fidelity-2.svg",      
-      // "/images/ocean/Low-fidelity-3.svg",      
-      // "/images/ocean/Low-fidelity-4.svg",      
-      // "/images/ocean/Low-fidelity-5.svg"       
+      "/images/ocean/lowfi1.jpeg", 
+      "/images/ocean/lowfi2.jpeg",      
+      "/images/ocean/lowfi3.jpeg",      
+      "/images/ocean/lowfi4.jpeg",      
+      "/images/ocean/lowfi5.jpeg"       
     ]} 
               theme={theme}
               mounted={mounted}
             />
             <AutoScrollSection 
-              title="High-Fidelity Interface" 
-              images={["/images/ocean/High-fidelity-1.png", "/images/ocean/High-fidelity-2.png", "/images/ocean/High-fidelity-3.png"]} 
-              theme={theme}
-              mounted={mounted}
-            />
+  title="High-Fidelity Interface" 
+  images={[
+    "/images/ocean/highfi1.jpg", 
+    "/images/ocean/highfi2.jpg", 
+    "/images/ocean/highfi3.jpg", 
+    "/images/ocean/highfi4.jpg", 
+    "/images/ocean/highfi5.jpg"
+  ]} 
+  theme={theme}
+  mounted={mounted}
+/>
           </section>
 
           {/* IMPACT METRICS */}

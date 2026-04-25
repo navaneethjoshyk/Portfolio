@@ -18,7 +18,7 @@ module.exports = {
         mono: ["var(--font-geist-mono)"],
       },
       animation: {
-        "loop-scroll": "loop-scroll 20s linear infinite",
+        "loop-scroll": "loop-scroll 50s linear infinite",
         marquee: "marquee 60s linear infinite",
         marquee2: "marquee2 60s linear infinite",
       },
