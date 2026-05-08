@@ -154,24 +154,32 @@ const MedConnectCaseStudy = () => {
             </div>
           </section>
 
-          {/* IA SECTION */}
-          <section className="mb-32">
-            <h2 className="text-2xl laptop:text-3xl font-black uppercase tracking-tighter mb-12">System Architecture</h2>
-            <div className={`rounded-[2rem] border shadow-2xl overflow-auto custom-scrollbar ${
-              isDark ? "bg-[#161616] border-white/10" : "bg-white border-black/10"
-            }`}>
-              <div className="p-8 laptop:p-12 h-[400px] laptop:h-[600px] flex items-start">
-                <img src="/images/med-connect-ia.svg" className="h-full w-auto max-w-none block object-contain" alt="Med Connect IA" />
-              </div>
-            </div>
-          </section>
+          
 
           {/* DESIGN EVOLUTION */}
           <section className="mb-32">
             <h2 className="text-4xl font-bold mb-10">Visual Evolution</h2>
-            <AutoScrollSection title="Exploratory Sketching" images={["/images/med-low1.png", "/images/med-low2.png"]} isDark={isDark} mounted={mounted} />
-            <AutoScrollSection title="Refined Prototypes" images={["/images/med-mid1.png", "/images/med-mid2.png"]} isDark={isDark} mounted={mounted} />
-            <AutoScrollSection title="Production UI" images={["/images/med-high1.png", "/images/med-high2.png"]} isDark={isDark} mounted={mounted} />
+            <AutoScrollSection 
+            title="Exploratory Sketching" 
+            images={[
+              "/images/med/lowfid1.jpeg", // Fixed extension from .jpg to .jpeg to match your file
+              "/images/med/lowfid2.jpeg", 
+              "/images/med/lowfid3.jpeg"
+            ]} 
+            isDark={isDark} 
+            mounted={mounted} 
+          />
+            <AutoScrollSection 
+            title="Production UI" 
+            images={[
+              "/images/med/highfid1.jpg",  
+              "/images/med/highfid2.png", 
+              "/images/med/highfid3.png",
+              "/images/med/highfid4.png"
+            ]} 
+            isDark={isDark} 
+            mounted={mounted} 
+          />
           </section>
 
           {/* EVALUATION */}
