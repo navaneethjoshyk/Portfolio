@@ -59,6 +59,8 @@ const CareCalendarCaseStudy = () => {
         <title>Care Calendar | UX Case Study</title>
       </Head>
       {data.showCursor && <Cursor />}
+
+
       
       <div className={`container mx-auto mt-10 px-5 laptop:px-0 transition-colors duration-500 ${
         isDark ? "text-white" : "text-black bg-white"
