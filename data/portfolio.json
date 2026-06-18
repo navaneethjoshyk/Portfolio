@@ -97,43 +97,44 @@
         }
       ],
 
-"aboutpara": "I am an UX/UI Designer and Web Developer with over two years of experience in the telecom, healthcare, and non-profit sectors. By combining Interaction Design expertise with Full-Stack development, I bridge the gap between complex user needs and high-performance technical solutions.\n\nMy expertise spans the entire lifecycle from Figma prototyping and design systems to implementing responsive front-end interfaces. I am dedicated to a user-centered approach that ensures every project is as functional as it is visually compelling.\n\nWhether leading design at OHANA™ or developing resource-sharing platforms at B12Feed, I thrive in agile teams translating stakeholder vision into reality. I focus on creating accessible, impactful experiences that drive both user satisfaction and business growth.",
+
+  "aboutpara": "I am an UX/UI Designer and Web Developer with over two years of experience in the telecom, healthcare, and non-profit sectors. By combining Interaction Design expertise with Full-Stack development, I bridge the gap between complex user needs and high-performance technical solutions.\n\nMy expertise spans the entire lifecycle from Figma prototyping and design systems to implementing responsive front-end interfaces. I am dedicated to a user-centered approach that ensures every project is as functional as it is visually compelling.\n\nWhether leading design at OHANA™ or developing resource-sharing platforms at B12Feed, I thrive in agile teams translating stakeholder vision into reality. I focus on creating accessible, impactful experiences that drive both user satisfaction and business growth.",
   "resume": {
-    "tagline": "I'm an UX/UI Product Designer & Web Developer.",
-    "description": "Creative and detail-oriented designer with 2+ years of experience delivering intuitive digital products across telecom, healthcare, and non-profit sectors. Passionate about translating complex user needs into clean, accessible, and impactful experiences using Figma, React, and AI-powered tools.",
+    "tagline": "UX/UI Product Designer | Interaction Designer | Front-End Developer",
+    "description": "Creative and detail-oriented UX/UI Designer with 2+ years of hands-on experience designing intuitive digital products across telecom, healthcare, and non-profit sectors. Uniquely positioned at the intersection of Computer Science Engineering and Interaction Design—combining technical systems thinking with human-centred design practice.",
     "experiences": [
       {
         "id": "1",
-        "dates": "January 2026 - Present",
-        "type": "Internship",
-        "position": "UI/UX Designer at B12Feed (Toronto, ON)",
-        "bullets": "Designing user-facing workflows and interface components for a community resource-sharing platform. Created user journey documentation and MVP-to-Phase-2 product roadmaps to support long-term sustainability. Collaborated with developers to ensure accurate design implementation throughout the software development lifecycle."
+        "dates": "Jan 2026 - Present",
+        "type": "Remote",
+        "position": "Front-End Developer at B12Feed (Toronto, ON)",
+        "bullets": "Designing user-facing workflows and interface components for a community resource-sharing platform (details restricted under NDA). Created user journey documentation and MVP-to-Phase-2 product roadmap to support long-term design sustainability. Collaborated with developers to ensure design intent was accurately implemented throughout the software development lifecycle. Develop and test software prototypes for interactive digital platforms, applying embedded system design principles and best practices for code quality and maintainability.Collaborate cross-functionally with faculty and engineering teams to define requirements and ensure seamless system integration across research deliverables.Leverage LLM tools including GitHub Copilot and Claude agents to accelerate development workflows and improve code reliability.Contribute to architectural decisions, documentation, and unit testing using mock frameworks to validate software functionality."
       },
       {
         "id": "2",
-        "dates": "September 2024 - September 2025",
+        "dates": "Sept 2024 - Sept 2025",
         "type": "Remote",
-        "position": "UI/UX Lead at OHANA™",
-        "bullets": "Redesigned and developed key website pages to deliver a visually cohesive experience aligned with brand identity. Built fully responsive, mobile-first layouts and created high-fidelity prototypes in Figma to communicate intent to stakeholders. Maintained organized design documentation and standardized design system components to ensure consistency."
+        "position": "UI/UX designer(Contract) at OHANA™",
+        "bullets": "Redesigned and developed key website pages including 'Who We Are' and 'What We Do', delivering a visually cohesive experience aligned with brand identity. Built fully responsive, mobile-first layouts ensuring seamless cross-device experiences for a fast-growing telecom platform. Created wireframes, high-fidelity prototypes, and interactive flows in Figma to communicate design intent to developers and stakeholders. Conducted usability evaluations and prepared structured reports with actionable improvement recommendations. Maintained organised design documentation, version-controlled project files, and standardised design system components to ensure consistency."
       },
       {
         "id": "3",
-        "dates": "January 2022 - June 2023",
+        "dates": "Jan 2022 - June 2023",
         "type": "Full Time",
         "position": "UI/UX Designer at MediGuru (Chennai, India)",
-        "bullets": "Designed and launched the company's main website applying user-centered design principles to enhance accessibility. Conducted user research and usability testing, translating findings into actionable design iterations. Developed and maintained UI style guides and design documentation."
+        "bullets": "Designed and launched the company's main website applying user-centred design principles to enhance usability and accessibility. Created wireframes, prototypes, and mock-ups using Figma and Adobe XD, contributing to the visual and interactive quality of digital products. Conducted user research and usability testing, translating findings into actionable design iterations. Developed and maintained UI style guides and design documentation to ensure consistency across the product."
       }
     ],
     "education": {
       "universityName": "Humber Polytechnic & Conestoga College",
-      "universityDate": "2024 - 2026",
-      "universityPara": "Currently pursuing Web Development at Humber Polytechnic (CGPA: 3.5) following a Graduate Certificate in Interactive Media Management - Interaction Design from Conestoga College. Background includes a Bachelor of Computer Science & Engineering with a strong foundation in programming and systems design."
+      "universityDate": "2018 - 2026",
+      "universityPara": "Completed Web Development at Humber Polytechnic (CGPA: 3.5) with focus on front-end integration and design-to-development workflows, and a Graduate Certificate in Interactive Media Management - Interaction Design from Conestoga College. Background includes a Bachelor of Computer Science & Engineering from an affiliated university in India (CGPA: 6.7) with a strong foundation in data structures, algorithms, and systems design."
     },
     "languages": [
       "HTML",
       "CSS",
-      "Python",
-      "Javascript"
+      "Javascript",
+      "Python"
     ],
     "frameworks": [
       "React",
@@ -144,10 +145,16 @@
       "Figma",
       "Adobe XD",
       "Adobe Illustrator",
+      "Adobe Photoshop",
       "Framer",
-      "Version Control (Git)",
+      "AI-powered design tools",
+      "Wireframing & Prototyping",
       "Design Systems",
-      "Usability Testing"
+      "UX Research & Usability Testing",
+      "User Journey Mapping",
+      "User-centred design & Lean UX",
+      "Accessible design",
+      "Version Control (Git)"
     ]
   }
 }
