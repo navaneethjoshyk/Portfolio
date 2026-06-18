@@ -21,5 +21,5 @@ A collection of professionally drafted descriptions for core design and developm
 
 ### Implementation Tips
 - **Consistency:** Using the same sentence structure across all services helps create a cohesive visual and reading rhythm on your portfolio page.
-- **Tone:** These use "We," which is standard for agencies or freelancers presenting as a professional entity. Swap to "I" if you prefer a more personal, individual freelancer tone.
+- **Tone:** These use "We," which is standard for agencies or freelancers presenting as a professional entity. 
 - **Visuals:** These pair well with clean iconography or high-quality project thumbnails in a grid layout.
