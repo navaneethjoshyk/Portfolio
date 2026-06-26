@@ -35,7 +35,17 @@
   "title":"WeUnited matrimony app UI",
   "description":"High-stakes Matchmaking | UI/UX Design",
   "imageSrc":"/images/weunited.svg","url":"/projects/weUnited",
-  "date": "2 months ago"}],
+  "date": "2 months ago"},
+  {
+  "id": "6",
+  "title": "Infinite Housing",
+  "description": "Housing | UI/UX Design",
+  "imageSrc": "/images/infinite-housing-cover.png",
+  "url": "/projects/infiniteHousing",
+  "date": "1 month ago"
+}
+
+],
 
 
 "stats": [
