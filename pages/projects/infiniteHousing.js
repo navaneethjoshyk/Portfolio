@@ -208,9 +208,9 @@ const InfiniteHousingCaseStudy = () => {
             }`}>
               <div className="p-8 laptop:p-12 h-[400px] laptop:h-[600px] flex items-center justify-center">
                 <img
-                  src="/images/infinitehousing/ih-user-flow.png"
+                  src="/images/infinitehousing/information.jpg"
                   className="h-full w-auto max-w-none block object-contain"
-                  alt="Infinite Housing User Flow"
+                  alt="Infinite Housing Information Architecture"
                 />
               </div>
             </div>
@@ -224,7 +224,7 @@ const InfiniteHousingCaseStudy = () => {
             }`}>
               <div className="w-full laptop:w-2/5 aspect-square bg-gray-200 rounded-[2rem] overflow-hidden">
                 <img
-                  src="/images/infinitehousing/ih-persona.png"
+                  src="/images/infinitehousing/ih-persona.svg"
                   className="w-full h-full object-cover grayscale"
                   alt="The Eco-Builder"
                 />
@@ -381,17 +381,41 @@ const InfiniteHousingCaseStudy = () => {
             <h2 className="text-4xl font-bold mb-10">Design Evolution</h2>
             <AutoScrollSection
               title="Low-Fidelity Wireframes"
-              images={["/images/infinitehousing/Low-fid/ih-low-1.png", "/images/infinitehousing/Low-fid/ih-low-2.png", "/images/infinitehousing/Low-fid/ih-low-3.png"]}
+              images={[
+                "/images/infinitehousing/ih-low/Dashboard(existing).png",
+                "/images/infinitehousing/ih-low/Overwiew.png",
+                "/images/infinitehousing/ih-low/Product overview.png",
+                "/images/infinitehousing/ih-low/Product series 1.png",
+                "/images/infinitehousing/ih-low/Product series 3.png",
+                "/images/infinitehousing/ih-low/key usage.png",
+                "/images/infinitehousing/ih-low/new license.png",
+                "/images/infinitehousing/ih-low/Check valid license.png",
+                "/images/infinitehousing/ih-low/license confirmation and download.png",
+                "/images/infinitehousing/ih-low/Continue training.png",
+              ]}
               isDark={isDark}
             />
             <AutoScrollSection
               title="Mid-Fidelity"
-              images={["/images/infinitehousing/Mid-fid/ih-mid-1.png", "/images/infinitehousing/Mid-fid/ih-mid-2.png", "/images/infinitehousing/Mid-fid/ih-mid-3.png"]}
+              images={[
+                "/images/infinitehousing/ih-mid/Dashboard.png",
+                "/images/infinitehousing/ih-mid/Login(EU).png",
+                "/images/infinitehousing/ih-mid/Login(EU)-1.png",
+                "/images/infinitehousing/ih-mid/Signup.png",
+                "/images/infinitehousing/ih-mid/Usertype.png",
+                "/images/infinitehousing/ih-mid/Module.png",
+                "/images/infinitehousing/ih-mid/Module 1.png",
+                "/images/infinitehousing/ih-mid/Form.png",
+                "/images/infinitehousing/ih-mid/Check Licence status.png",
+                "/images/infinitehousing/ih-mid/LicenceEU).png",
+                "/images/infinitehousing/ih-mid/Product overview.png",
+                "/images/infinitehousing/ih-mid/Product series(EU).png",
+              ]}
               isDark={isDark}
             />
             <AutoScrollSection
               title="High-Fidelity"
-              images={["/images/infinitehousing/ih-high-1.png", "/images/infinitehousing/ih-high-2.png", "/images/infinitehousing/ih-high-3.png", "/images/infinitehousing/ih-high-4.png", "/images/infinitehousing/ih-high-5.png", "/images/infinitehousing/ih-high-6.png", "/images/infinitehousing/ih-high-7.png", "/images/infinitehousing/ih-high-8.png", "/images/infinitehousing/ih-high-9.png", "/images/infinitehousing/ih-high-10.png", "/images/infinitehousing/ih-high-11.png", "/images/infinitehousing/ih-high-12.png"]}
+              images={["/images/infinitehousing/ih-high/ih-high-1.png", "/images/infinitehousing/ih-high/ih-high-2.png", "/images/infinitehousing/ih-high/ih-high-3.png", "/images/infinitehousing/ih-high/ih-high-4.png", "/images/infinitehousing/ih-high/ih-high-5.png", "/images/infinitehousing/ih-high/ih-high-6.png", "/images/infinitehousing/ih-high/ih-high-7.png", "/images/infinitehousing/ih-high/ih-high-8.png", "/images/infinitehousing/ih-high/ih-high-9.png", "/images/infinitehousing/ih-high/ih-high-10.png", "/images/infinitehousing/ih-high/ih-high-11.png", "/images/infinitehousing/ih-high/ih-high-12.png"]}
               isDark={isDark}
             />
           </section>
