@@ -120,8 +120,7 @@ const CredCaseStudy = () => {
           {/* INTERFACE ITERATIONS */}
           <section className="mb-40">
             <h2 className="text-4xl font-bold mb-16 italic">Interface Iterations</h2>
-            <AutoScrollSection title="Monochrome Skeleton" images={["/images/cred-low1.png", "/images/cred-low2.png"]} isDark={isDark} mounted={mounted} />
-            <AutoScrollSection title="Copper & Carbon High-Fi" images={["/images/cred-high1.png", "/images/cred-high2.png"]} isDark={isDark} mounted={mounted} />
+            <AutoScrollSection title="Copper & Carbon High-Fi" images={["/images/Cred.png", "/images/cred cover.svg"]} isDark={isDark} mounted={mounted} />
           </section>
 
           {/* METRICS */}
@@ -150,8 +149,10 @@ const CredCaseStudy = () => {
           {/* CTA */}
           <section className="mb-40 text-center">
             <h2 className="text-4xl font-bold mb-8 italic">The Full Design System</h2>
-            <a 
-              href="https://www.figma.com/..." 
+            <a
+              href="https://www.figma.com/design/feH6rXNjjmcBC4XyHDWuVK/cred-UPI?node-id=0-1&t=VrOjZF2o55LGPnQb-1"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`px-12 py-6 rounded-full font-bold uppercase tracking-widest text-sm transition-all ${
                 isDark ? "bg-white text-black hover:bg-amber-500 hover:text-white" : "bg-black text-white hover:bg-amber-600"
               }`}

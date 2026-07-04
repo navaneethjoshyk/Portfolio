@@ -109,19 +109,6 @@ const InfiniteHousingCaseStudy = () => {
             </div>
           </section>
 
-          {/* HERO IMAGE */}
-          <section className="mb-20">
-            <div className={`rounded-[2rem] overflow-hidden border ${
-              isDark ? "border-white/10" : "border-black/5"
-            }`}>
-              <img
-                src="/images/infinitehousing/ih-hero.png"
-                alt="Infinite Housing App"
-                className="w-full object-cover"
-              />
-            </div>
-          </section>
-
           {/* PROBLEM STATEMENT */}
           <section className="mb-32 mt-20">
             <div className="grid grid-cols-1 laptop:grid-cols-12 gap-10">
