@@ -10,40 +10,41 @@
     "url": "/projects/careCalendar",
     "date": "8 months ago"
   },
-            
-  {"id":"2",
-  "title":"Ocean Palette | The Art of the Plate",
-  "description":"B2C | UI/UX Design",
-  "imageSrc":"/images/restaurant.png",
-  "url":"/projects/oceanPalette",
-  "date": "3 months ago"},
-            
+
+  {
+  "id": "2",
+  "title": "Infinite Housing",
+  "description": "Housing | UI/UX Design",
+  "imageSrc": "/images/infinitehousing/ih-high/iMockup - iPhone 15 Pro Max.png",
+  "url": "/projects/infiniteHousing",
+  "date": "1 month ago"
+},
+
   {"id":"3",
   "title":"Med-connect",
   "description":"B2B | UI/UX Design",
   "imageSrc":"/images/Med-connect.png",
   "url":"/projects/medConnect",
   "date": "1 month ago"},
-            
+
   {"id":"4",
+  "title":"Ocean Palette | The Art of the Plate",
+  "description":"B2C | UI/UX Design",
+  "imageSrc":"/images/restaurant.png",
+  "url":"/projects/oceanPalette",
+  "date": "3 months ago"},
+
+  {"id":"5",
   "title":"Cred app UI",
   "description":"Fintech | UI/UX Design",
   "imageSrc":"/images/cred cover.svg","url":"/projects/cred",
   "date": "2 months ago"},
 
- {"id":"5",
+ {"id":"6",
   "title":"WeUnited matrimony app UI",
   "description":"High-stakes Matchmaking | UI/UX Design",
   "imageSrc":"/images/weunited.svg","url":"/projects/weUnited",
-  "date": "2 months ago"},
-  {
-  "id": "6",
-  "title": "Infinite Housing",
-  "description": "Housing | UI/UX Design",
-  "imageSrc": "/images/infinitehousing/ih-high/iMockup - iPhone 15 Pro Max.png",
-  "url": "/projects/infiniteHousing",
-  "date": "1 month ago"
-}
+  "date": "2 months ago"}
 
 ],
 
